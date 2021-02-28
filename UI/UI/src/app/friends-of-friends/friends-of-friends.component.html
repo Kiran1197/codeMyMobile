@@ -1,0 +1,24 @@
+<h1 style="text-align:center">friends of {{friendUsername['name']}}</h1>
+<div class="container">
+  <table class="table table-striped table-bordered">
+      <thead>
+          <tr>
+            <th>Avatar</th>
+            <th>User ID</th>
+            <th>Name</th>
+            <th>Gender</th>
+            <th>Age</th>
+          </tr>
+      </thead>
+      <tbody>
+          <tr *ngFor="let user of friendsOfFriendsData">
+            <td><img id="avatar" src={{user.DPUrl}}></td>
+            <td>{{user.UserId}}</td>
+            <td>{{user.FirstName}} {{user.LastName}}</td>
+            <td>{{user.Gender}}</td>
+            <td>{{user.Age}}</td>
+          </tr>
+      </tbody>
+  </table>
+</div>
+
